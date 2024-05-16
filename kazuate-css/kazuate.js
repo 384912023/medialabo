@@ -21,4 +21,28 @@ function hantei() {
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
+  kaisu=kaisu+1;
+  console.log(kaisu+"回目の予想:"+4);
+  if(kaisu<4){
+    if(kotae===4){
+        console.log("正解です．おめでとう!");
+        if(kaisu<3){
+            kaisu=4;
+        }
+      }
+      if(kaisu<3){
+          if(kotae<4){
+            console.log("まちがい．答えはもっと小さいですよ"+kotae);
+          }
+          else{
+            console.log("まちがい．答えはもっと大きいですよ"+kotae);
+          }
+      }
+      else{
+        console.log("まちがい．残念でした答えは "+kotae+" です．");
+      }
+    }
+    else{
+        console.log("答えは "+kotae+" でした．すでにゲームは終わっています");
+    }
 }
