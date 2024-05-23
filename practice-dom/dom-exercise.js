@@ -20,10 +20,27 @@ p.textContent = '写真表と都市の緯度経度のページです';
 p.setAttribute('style', 'text-emphasis: sesame blue');
 h2.insertAdjacentElement('afterend', p); 
 // 練習4-3 写真表作成プログラム
+let a = document.querySelector('div#phototable');
+let b = document.createElement('img');
+b.setAttribute('src','taro.png'); 
+let c = document.createElement('p');
+c.insertAdjacentElement('beforeend', b); 
+a.insertAdjacentElement('beforeend', c); 
 
+let b2 = document.createElement('img');
+b2.setAttribute('src','jiro.png');
+let c2 = document.createElement('p');
+c2.insertAdjacentElement('beforeend', b2); 
+a.insertAdjacentElement('beforeend', c2);
+
+let b3 = document.createElement('img');
+b3.setAttribute('src','hanako.png');
+let c3 = document.createElement('p');
+c3.insertAdjacentElement('beforeend', b3); 
+a.insertAdjacentElement('beforeend', c3);
 
 // 練習4-4 箇条書き削除プログラム
-
-
+let w = document.querySelector('ul#location');
+w.remove();
 // 練習4-5 箇条書き追加プログラム
 
