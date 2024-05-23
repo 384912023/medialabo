@@ -20,8 +20,8 @@ p.textContent = '写真表と都市の緯度経度のページです';
 p.setAttribute('style', 'text-emphasis: sesame blue');
 h2.insertAdjacentElement('afterend', p); 
 // 練習4-3 写真表作成プログラム
-let div = document.querySelector('div#phototable');
-let a = document.createElement('img');
+
+
 // 練習4-4 箇条書き削除プログラム
 
 
