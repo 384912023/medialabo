@@ -49,6 +49,6 @@ for (let n of w) {
 let w1 = document.querySelector('ul#location');
 for (let n of data) {
 	let li = document.createElement('li');
-	li.textContent = n.name+lng;
+	li.textContent = n.name+' ... '+n.lat+ ',' +n.lng;
     w1.insertAdjacentElement('beforeend', li);
 	} 
