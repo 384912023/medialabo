@@ -40,11 +40,12 @@ c3.insertAdjacentElement('beforeend', b3);
 a.insertAdjacentElement('beforeend', c3);
 
 // 練習4-4 箇条書き削除プログラム
-let w = document.querySelector('ul#location');
+let w = document.querySelector('li#location');
 w.remove();
 // 練習4-5 箇条書き追加プログラム
-let li = document.createElement('li');
+
 for (let n of data) {
+	let li = document.createElement('li');
 	li.textContent = n.name;
 	} 
-	w.insertAdjacentElement('beforeend', li);
+w.insertAdjacentElement('beforeend', li);
