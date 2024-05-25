@@ -47,5 +47,5 @@ let ul = document.createElement('ul');
 for (let n of data) {
 	let li = document.createElement('li');
 	li.textContent = n.name;
+    ul.insertAdjacentElement('beforeend', li);
 	} 
-ul.insertAdjacentElement('beforeend', li);
