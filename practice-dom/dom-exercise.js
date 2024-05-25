@@ -43,6 +43,8 @@ a.insertAdjacentElement('beforeend', c3);
 let w = document.querySelector('ul#location');
 w.remove();
 // 練習4-5 箇条書き追加プログラム
+let li = document.createElement('li');
 for (let n of data) {
-	w.textContent = n.name;
+	li.textContent = n.name;
 	} 
+	w.insertAdjacentElement('beforeend', li);
