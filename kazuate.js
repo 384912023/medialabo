@@ -1,5 +1,6 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
+let span1 = document.querySelector('span#kaisu');	
 let span = document.querySelector('span#answer');	
 let p = document.createElement('p');
 p.textContent = ('答え（デバッグ用）: ' + kotae);
@@ -7,6 +8,7 @@ span.insertAdjacentElement('beforeend', p);
 
 // 入力回数（予想回数）
 let kaisu = 0;
+span1.insertAdjacentElement('beforeend', p1);
 
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
@@ -26,7 +28,8 @@ function hantei() {
   // 課題3-1における出力先はコンソール
   let seikai=0;
   kaisu=kaisu+1;
-  p.textContent = (kaisu+"回目の予想:"+4);
+  p1.textContent = kaisu;
+  p.textContent = ("回目の予想:"+4);
   if(kaisu<4){
     if(kotae===4){
       p.textContent = ("正解です．おめでとう!");
