@@ -3,6 +3,7 @@ let kotae = Math.floor(Math.random()*10) + 1;
 let span1 = document.querySelector('span#kaisu');	
 let span = document.querySelector('span#answer');	
 let p = document.createElement('p');
+let p1 = document.createElement('p');
 p.textContent = "";
 span.insertAdjacentElement('beforeend', p);
 p1.textContent = "";
