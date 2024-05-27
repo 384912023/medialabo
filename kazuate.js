@@ -3,9 +3,9 @@ let kotae = Math.floor(Math.random()*10) + 1;
 let span1 = document.querySelector('span#kaisu');	
 let span = document.querySelector('span#answer');	
 let p = document.createElement('p');
-p.textContent = ('答え（デバッグ用）: ' + kotae);
+p.textContent = "";
 span.insertAdjacentElement('beforeend', p);
-
+p1.textContent = "";
 // 入力回数（予想回数）
 let kaisu = 0;
 span1.insertAdjacentElement('beforeend', p1);
