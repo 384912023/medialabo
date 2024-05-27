@@ -1,7 +1,8 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
-
-console.log('答え（デバッグ用）: ' + kotae);
+let a = document.querySelector('a#result');	
+let p = document.createElement('p');
+p.textContent = ('答え（デバッグ用）: ' + kotae);
 
 // 入力回数（予想回数）
 let kaisu = 0;
