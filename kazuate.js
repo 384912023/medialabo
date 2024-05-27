@@ -1,6 +1,6 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
-let a = document.querySelector('a#kaisu');	
+let span = document.querySelector('span#kaisu');	
 let p = document.createElement('p');
 p.textContent = ('答え（デバッグ用）: ' + kotae);
 kaisu.insertAdjacentElement('afterend', p);
