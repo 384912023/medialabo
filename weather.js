@@ -48,4 +48,14 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 
 let div = document.querySelector('div#result');	
-//div.textContent = data;
+div.textContent = "緯度: "+data.coord.lon;
+div.textContent = "経度: "+data.coord.lat;
+
+//div.textContent = "天気: "+data.;曇りがち
+
+div.textContent = "最低気温: "+data.main.temp_min;
+div.textContent = "最高気温: "+data.main.temp_max;
+div.textContent = "湿度: "+data.main.humidity;
+div.textContent = "風速: "+data.wind.speed;
+div.textContent = "風向: "+data.wind.deg;
+div.textContent = "都市名: "+data.name;
