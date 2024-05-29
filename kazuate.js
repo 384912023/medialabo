@@ -9,7 +9,7 @@ span.insertAdjacentElement('beforeend', p);
 p1.textContent = "";
 // 入力回数（予想回数）
 let kaisu = 0;
-span1.insertAdjacentElement('afterend', p1);
+span1.insertAdjacentElement('beforeend', p1);
 
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
