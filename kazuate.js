@@ -1,5 +1,8 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
+
+kotae = 1;
+
 let span1 = document.querySelector('span#kaisu');	
 let span2 = document.querySelector('span#answer');	
 let p0 = document.querySelector('p#result');	
@@ -10,7 +13,7 @@ span1.insertAdjacentElement('afterend', p1);
 span2.insertAdjacentElement('beforeend', p2);
 
 // 入力回数（予想回数）
-let kaisu = 0;
+let kaisu = 1;
 
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
@@ -55,4 +58,5 @@ function hantei() {
     else{
         p0.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
     }
+    kaisu=kaisu+1
 }
