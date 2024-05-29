@@ -36,11 +36,11 @@ function hantei() {
     if(kotae===4){
       p0.textContent = ("正解です．おめでとう!");
     }
-    if(kaisu<3){
-        if(kotae<=3){
+    else if(kaisu<3){
+        if(kotae<4){
           p0.textContent = ("まちがい．答えはもっと小さいですよ"+kotae); 
         }
-        else if(kotae>=5){
+        else{
           p0.textContent = ("まちがい．答えはもっと大きいですよ"+kotae);
         }
       }
