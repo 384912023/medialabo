@@ -1,7 +1,7 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
 
-kotae = 1;
+kotae = 4;
 
 let span1 = document.querySelector('span#kaisu');	
 let span2 = document.querySelector('span#answer');	
