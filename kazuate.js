@@ -34,29 +34,25 @@ function hantei() {
   kaisu=kaisu+1;
   //p0.textContent = kaisu;
   //p0.textContent = ("回目の予想:"+4);
-  if(kaisu<=4){
+  if(kaisu<4){
     p1.textContent = kaisu;
     p2.textContent = yoso;
     if(kotae===4){
       p0.textContent = ("正解です．おめでとう!");
-        if(kaisu<3){
-            kaisu=4;
+    }
+    if(kaisu<3){
+        if(kotae<4){
+          p0.textContent = ("まちがい．答えはもっと小さいですよ"+kotae); 
+        }
+        else{
+          p0.textContent = ("まちがい．答えはもっと大きいですよ"+kotae);
         }
       }
-      if(kaisu<3){
-          if(kotae<4){
-            p0.textContent = ("まちがい．答えはもっと小さいですよ"+kotae);
-          }
-          else{
-            p0.textContent = ("まちがい．答えはもっと大きいですよ"+kotae);
-          }
-      }
-      else{
-        p0.textContent = ("まちがい．残念でした答えは "+kotae+" です．");
-      }
-    }
     else{
-        p0.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
+      p0.textContent = ("まちがい．残念でした答えは "+kotae+" です．");
     }
-    kaisu=kaisu+1
+  }
+  else{
+      p0.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
+  }
 }
