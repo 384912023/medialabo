@@ -31,8 +31,8 @@ function hantei() {
   //p0.textContent = kaisu;
   //p0.textContent = ("回目の予想:"+4);
   if(kaisu<4){
-    p1.textContent = kaisu;
-    p2.textContent = yoso;
+    span1.textContent = kaisu;
+    span2.textContent = yoso;
     if(kotae===4){
       p0.textContent = ("正解です．おめでとう!");
     }
@@ -49,8 +49,8 @@ function hantei() {
     }
   }
   else{
-    p1.textContent = kaisu;
-    p2.textContent = yoso;
+    span1.textContent = kaisu;
+    span2.textContent = yoso;
       p0.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
   }
 }
