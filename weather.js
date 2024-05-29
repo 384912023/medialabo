@@ -48,5 +48,4 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 
 let div = document.querySelector('div#result');	
-div.textContent = data;
 div.textContent = "ssssssssss";
