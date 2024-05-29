@@ -46,9 +46,8 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let div;
-let div1 = document.querySelector('div#result');	
-div.insertAdjacentElement('beforeend', div1);
+
+let div = document.querySelector('div#result');	
 div.textContent = "緯度: "+data.coord.lon;
 div.textContent = "経度: "+data.coord.lat;
 
