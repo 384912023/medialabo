@@ -6,7 +6,7 @@ let p0 = document.querySelector('p#result');
 
 let p1 = document.createElement('p');
 let p2 = document.createElement('p');
-span1.insertAdjacentElement('beforeend', p1);
+span1.insertAdjacentElement('afterend', p1);
 span2.insertAdjacentElement('beforeend', p2);
 
 // 入力回数（予想回数）
