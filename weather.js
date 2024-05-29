@@ -47,5 +47,6 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 
-console.log(data);
-console.log("uuuu");
+let div = document.querySelector('div#result');	
+div.textContent = data;
+div.textContent = "ssssssssss";
