@@ -2,14 +2,16 @@
 let kotae = Math.floor(Math.random()*10) + 1;
 let span1 = document.querySelector('span#kaisu');	
 let span = document.querySelector('span#answer');	
-let p = document.createElement('p');
-let p1 = document.createElement('p');
-p.textContent = "";
-span.insertAdjacentElement('beforeend', p);
-p1.textContent = "";
+let p0 = document.querySelector('p#result');	
+
+//let p = document.createElement('p');
+//let p1 = document.createElement('p');
+//p.textContent = "";
+//span.insertAdjacentElement('beforeend', p);
+//p1.textContent = "";
 // 入力回数（予想回数）
-let kaisu = 0;
-span1.insertAdjacentElement('beforeend', p1);
+//let kaisu = 0;
+//span1.insertAdjacentElement('beforeend', p1);
 
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
@@ -29,28 +31,28 @@ function hantei() {
   // 課題3-1における出力先はコンソール
   let seikai=0;
   kaisu=kaisu+1;
-  p1.textContent = kaisu;
-  p.textContent = ("回目の予想:"+4);
+  p0.textContent = kaisu;
+  p0.textContent = ("回目の予想:"+4);
   if(kaisu<4){
     if(kotae===4){
-      p.textContent = ("正解です．おめでとう!");
+      p0.textContent = ("正解です．おめでとう!");
         if(kaisu<3){
             kaisu=4;
         }
       }
       if(kaisu<3){
           if(kotae<4){
-            p.textContent = ("まちがい．答えはもっと小さいですよ"+kotae);
+            p0.textContent = ("まちがい．答えはもっと小さいですよ"+kotae);
           }
           else{
-            p.textContent = ("まちがい．答えはもっと大きいですよ"+kotae);
+            p0.textContent = ("まちがい．答えはもっと大きいですよ"+kotae);
           }
       }
       else{
-        p.textContent = ("まちがい．残念でした答えは "+kotae+" です．");
+        p0.textContent = ("まちがい．残念でした答えは "+kotae+" です．");
       }
     }
     else{
-        p.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
+        p0.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
     }
 }
