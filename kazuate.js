@@ -30,11 +30,11 @@ function hantei() {
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
-  kaisu = kaisu + 2;
+  //kaisu = kaisu + 1;
   //p0.textContent = kaisu;
   //p0.textContent = ("回目の予想:"+4);
   if(kaisu<4){
-    //p1.textContent = kaisu;
+    p1.textContent = kaisu;
     p2.textContent = yoso;
     if(kotae===4){
       p0.textContent = ("正解です．おめでとう!");
