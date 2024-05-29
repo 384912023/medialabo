@@ -6,7 +6,7 @@ let p0 = document.querySelector('p#result');
 
 
 // 入力回数（予想回数）
-//let kaisu = 0;
+let kaisu = 0;
 //span1.insertAdjacentElement('beforeend', p1);
 
 // 予想を4回実行する
