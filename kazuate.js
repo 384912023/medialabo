@@ -33,7 +33,7 @@ function hantei() {
   kaisu=kaisu+1;
   //p0.textContent = kaisu;
   //p0.textContent = ("回目の予想:"+4);
-  if(kaisu<4){
+  if(kaisu<=4){
     if(kotae===4){
       p0.textContent = ("正解です．おめでとう!");
         if(kaisu<3){
