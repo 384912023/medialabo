@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="weather.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
     
     <head>
@@ -9,23 +9,13 @@
     </head>
     <body>
 
-        <label for="t">地名: </label>
-        <input type="search" name="t" id="t" size="3">
-        <button id="print">検索</button>
+	<label for="t">地名: </label>
+	<input type="search" name="t" size="10">
+	<button id="print">検索</button>
 
 
         <h1>世界の天気</h1>
         <h2>世界の天気（検索結果1件）</h2>
-        <p><li>緯度: 116.3972</li>
-            <li>経度: 39.9075</li>
-            <li>天気: 曇りがち</li>
-            <li>最低気温: 9.94</li>
-            <li>最高気温: 9.94</li>
-            <li>湿度: 14</li>
-            <li>風速: 2.65</li>
-            <li>風向: 197</li>
-            <li>都市名: 北京市</li>
-            </p>
             <div id="result"></div>
     </body>
 </html>

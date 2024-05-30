@@ -46,22 +46,54 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let c = document.querySelector('button#print');
-c.addEventListener('click', hantei);
+let b = document.querySelector('#print');
+b.addEventListener('click', greeting);
 
-function hantei(){
-  let i = document.querySelector('input[name="t"]');
-  let te = i.value;
-  console.log = (te);
-}
+// 2. イベントハンドラの定義
+function greeting() {
+	let i = document.querySelector('input[name="t"]');
+	let t = i.value;
+	console.log(t);
+  if(t==='カイロ'||'Cairo'){
+    key=360630;
+  }
+  else if(t==='モスクワ'){
+    key=524901;
+  }
+  else if(t==='ヨハネスブルク'){
+    key=993800;
+  }
+  else if(t==='北京'){
+    key=1816670;
+  }
+  else if(t==='東京'){
+    key=1850147;
+  }
+  else if(t==='シンガポール'){
+    key=1880252;
+  }
+  else if(t==='シドニー'){
+    key=2147714;
+  }
+  else if(t==='ロンドン'){
+    key=2643743;
+  }
+  else if(t==='パリ'){
+    key=2968815;
+  }
+  else if(t==='リオデジャネイロ'){
+    key=3451189;
+  }
+  else if(t==='ニューヨーク'){
+    key=5128581;
+  }
+  else if(t==='ロサンゼルス'){
+    key=5368361;
+  }
+  else{}
 
-
-
-
-
-function sendRequest() {
-  // URL を設定
   let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+key+'.json';
+
 
   // 通信開始
   axios.get(url)
@@ -70,26 +102,53 @@ function sendRequest() {
       .then(finish);      // 通信の最後の処理
 }
 
-// 通信が成功した時の処理
-function showResult(resp) {
-  // サーバから送られてきたデータを出力
-  let data = resp.data;
+  function showResult(resp) {
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
 
-  // data が文字列型なら，オブジェクトに変換する
-  if (typeof data === 'string') {
-      data = JSON.parse(data);
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+
+      let div = document.querySelector('div#result');	
+let li = document.createElement('li');
+li.textContent = "緯度: "+data.coord.lon;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "経度: "+data.coord.lat;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "天気: "+data.weather[0].description;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "最低気温: "+data.main.temp_min;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "最高気温: "+data.main.temp_max;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "湿度: "+data.main.humidity;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "風速: "+data.wind.speed;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "風向: "+data.wind.deg;
+div.insertAdjacentElement('beforeend', li);
+li = document.createElement('li');
+li.textContent = "都市名: "+data.name;
+div.insertAdjacentElement('beforeend', li);
   }
-
-  let div = document.querySelector('div#result');	
-div.textContent = "緯度: "+data.coord.lon;
-div.textContent = "経度: "+data.coord.lat;
-
-//div.textContent = "天気: "+data.weather.description);曇りがち
-
-div.textContent = "最低気温: "+data.main.temp_min;
-div.textContent = "最高気温: "+data.main.temp_max;
-div.textContent = "湿度: "+data.main.humidity;
-div.textContent = "風速: "+data.wind.speed;
-div.textContent = "風向: "+data.wind.deg;
-div.textContent = "都市名: "+data.name;
+// 通信エラーが発生した時の処理
+function showError(err) {
+  console.log(err);
 }
+
+// 通信の最後にいつも実行する処理
+function finish() {
+  console.log('Ajax 通信が終わりました');
+  key=0;
+}
+  
