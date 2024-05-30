@@ -46,8 +46,28 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+function sendRequest() {
+  // URL を設定
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
 
-let div = document.querySelector('div#result');	
+  // 通信開始
+  axios.get(url)
+      .then(showResult)   // 通信成功
+      .catch(showError)   // 通信失敗
+      .then(finish);      // 通信の最後の処理
+}
+
+// 通信が成功した時の処理
+function showResult(resp) {
+  // サーバから送られてきたデータを出力
+  let data = resp.data;
+
+  // data が文字列型なら，オブジェクトに変換する
+  if (typeof data === 'string') {
+      data = JSON.parse(data);
+  }
+
+  let div = document.querySelector('div#result');	
 div.textContent = "緯度: "+data.coord.lon;
 div.textContent = "経度: "+data.coord.lat;
 
@@ -59,3 +79,4 @@ div.textContent = "湿度: "+data.main.humidity;
 div.textContent = "風速: "+data.wind.speed;
 div.textContent = "風向: "+data.wind.deg;
 div.textContent = "都市名: "+data.name;
+}
