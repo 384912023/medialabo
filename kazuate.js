@@ -21,12 +21,13 @@ let c = document.querySelector('button#print');
 c.addEventListener('click', hantei);
 
 
-let i = document.querySelector('input[name="t"]');
-let te = i.value;
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
+  let i = document.querySelector('input[name="t"]');
+let te = i.value;
+
   let yoso =0;
   yoso = Number(te);
   // 課題3-1: 正解判定する
