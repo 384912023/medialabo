@@ -46,9 +46,22 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+let c = document.querySelector('button#print');
+c.addEventListener('click', hantei);
+
+function hantei(){
+  let i = document.querySelector('input[name="t"]');
+  let te = i.value;
+  console.log = (te);
+}
+
+
+
+
+
 function sendRequest() {
   // URL を設定
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json';
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+key+'.json';
 
   // 通信開始
   axios.get(url)
