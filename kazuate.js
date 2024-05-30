@@ -51,7 +51,7 @@ let te = i.value;
           p0.textContent = ("まちがい．答えはもっと大きいですよ");
         }
       }
-    else{
+    else if(kaisu===3){
       p0.textContent = ("まちがい．残念でした答えは "+kotae+" です．");
     }
   }
