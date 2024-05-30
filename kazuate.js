@@ -35,7 +35,7 @@ function hantei() {
   kaisu = kaisu + 1;
   //p0.textContent = kaisu;
   //p0.textContent = ("回目の予想:"+4);
-  if(kaisu<yoso){
+  if(kaisu<4){
     span1.textContent = kaisu;
     span2.textContent = yoso;
     if(kotae===yoso){
