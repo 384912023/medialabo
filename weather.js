@@ -48,7 +48,7 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 function sendRequest() {
   // URL を設定
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json';
 
   // 通信開始
   axios.get(url)
