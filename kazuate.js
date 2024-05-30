@@ -38,7 +38,7 @@ let te = i.value;
   //p0.textContent = kaisu;
   //p0.textContent = ("回目の予想:"+4);
   if(kaisu<4){
-    span1.textContent = kaisu;
+    span1.textContent = kaisu+ "回目の予想: ";
     span2.textContent = yoso;
     if(kotae===yoso){
       p0.textContent = ("正解です．おめでとう!");
@@ -56,7 +56,7 @@ let te = i.value;
     }
   }
   else{
-    span1.textContent = kaisu;
+    span1.textContent = kaisu+ "回目の予想: ";
     span2.textContent = yoso;
       p0.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
   }
