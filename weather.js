@@ -46,13 +46,12 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let div1 = document.createElement(defer);
+
 let div = document.querySelector('div#result');	
-div.insertAdjacentElement('beforeend', div)
 div.textContent = "緯度: "+data.coord.lon;
 div.textContent = "経度: "+data.coord.lat;
 
-//div.textContent = "天気: "+data.weather.description;曇りがち
+//div.textContent = "天気: "+data.weather.description);曇りがち
 
 div.textContent = "最低気温: "+data.main.temp_min;
 div.textContent = "最高気温: "+data.main.temp_max;
