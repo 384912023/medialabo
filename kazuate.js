@@ -1,5 +1,6 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
+console.log(kotae);
 
 let span1 = document.querySelector('span#kaisu');	
 let span2 = document.querySelector('span#answer');	
@@ -44,10 +45,10 @@ let te = i.value;
     }
     else if(kaisu<yoso){
         if(kotae<yoso){
-          p0.textContent = ("まちがい．答えはもっと小さいですよ"+kotae); 
+          p0.textContent = ("まちがい．答えはもっと小さいですよ"); 
         }
         else{
-          p0.textContent = ("まちがい．答えはもっと大きいですよ"+kotae);
+          p0.textContent = ("まちがい．答えはもっと大きいですよ");
         }
       }
     else{
