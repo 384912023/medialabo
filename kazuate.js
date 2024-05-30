@@ -30,14 +30,14 @@ function hantei() {
   kaisu = kaisu + 1;
   //p0.textContent = kaisu;
   //p0.textContent = ("回目の予想:"+4);
-  if(kaisu<t){
+  if(kaisu<yoso){
     span1.textContent = kaisu;
-    span2.textContent = t;
-    if(kotae===t){
+    span2.textContent = yoso;
+    if(kotae===yoso){
       p0.textContent = ("正解です．おめでとう!");
     }
-    else if(kaisu<t){
-        if(kotae<t){
+    else if(kaisu<yoso){
+        if(kotae<yoso){
           p0.textContent = ("まちがい．答えはもっと小さいですよ"+kotae); 
         }
         else{
@@ -50,7 +50,7 @@ function hantei() {
   }
   else{
     span1.textContent = kaisu;
-    span2.textContent = t;
+    span2.textContent = yoso;
       p0.textContent = ("答えは "+kotae+" でした．すでにゲームは終わっています");
   }
 }
