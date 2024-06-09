@@ -46,7 +46,7 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let b = document.querySelector('#print');
+let b = document.querySelector('button#print');
 b.addEventListener('click', greeting);
 
 // 2. イベントハンドラの定義
@@ -54,7 +54,7 @@ function greeting() {
 	let i = document.querySelector('input[name="t"]');
 	let t = i.value;
 	console.log(t);
-  if(t==='カイロ'||'Cairo'){
+  if(t==='カイロ'){
     key=360630;
   }
   else if(t==='モスクワ'){
@@ -90,8 +90,79 @@ function greeting() {
   else if(t==='ロサンゼルス'){
     key=5368361;
   }
-  else{}
-
+  else if(t==='Cairo'){
+    key=360630;
+  }
+  else if(t==='Moscow'){
+    key=524901;
+  }
+  else if(t==='Johannesburg'){
+    key=993800;
+  }
+  else if(t==='Beijing'){
+    key=1816670;
+  }
+  else if(t==='Tokyo'){
+    key=1850147;
+  }
+  else if(t==='Singapore'){
+    key=1880252;
+  }
+  else if(t==='Sydney'){
+    key=2147714;
+  }
+  else if(t==='London'){
+    key=2643743;
+  }
+  else if(t==='Paris'){
+    key=2968815;
+  }
+  else if(t==='Rio de Janeiro'){
+    key=3451189;
+  }
+  else if(t==='New York'){
+    key=5128581;
+  }
+  else if(t==='Los Angeles'){
+    key=5368361;
+  }
+  else if(t==='エジプト'){
+    key=360630;
+  }
+  else if(t==='ロシア'){
+    key=524901;
+  }
+  else if(t==='南アフリカ'){
+    key=993800;
+  }
+  else if(t==='中華人民共和国'){
+    key=1816670;
+  }
+  else if(t==='中国'){
+    key=1816670;
+  }
+  else if(t==='日本'){
+    key=1850147;
+  }
+  else if(t==='オーストラリア'){
+    key=2147714;
+  }
+  else if(t==='イギリス'){
+    key=2643743;
+  }
+  else if(t==='フランス'){
+    key=2968815;
+  }
+  else if(t==='ブラジル'){
+    key=3451189;
+  }
+  else if(t==='アメリカ合衆国'){
+    key=5128581;
+  }
+  else if(t==='アメリカ'){
+    key=5128581;
+  }
+  console.log(key);
   let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+key+'.json';
 
 
@@ -110,7 +181,6 @@ function greeting() {
     if (typeof data === 'string') {
         data = JSON.parse(data);
     }
-
 
       let div = document.querySelector('div#result');	
 let li = document.createElement('li');
