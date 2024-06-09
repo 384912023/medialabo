@@ -46,6 +46,27 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+let div = document.querySelector('div#result');	
+let li1 = document.createElement('li');
+
+let li2 = document.createElement('li');
+
+let li3 = document.createElement('li');
+
+let li4 = document.createElement('li');
+
+let li5 = document.createElement('li');
+
+let li6 = document.createElement('li');
+
+let li7 = document.createElement('li');
+
+let li8 = document.createElement('li');
+
+let li9 = document.createElement('li');
+
+
+
 let b = document.querySelector('button#print');
 b.addEventListener('click', greeting);
 
@@ -182,32 +203,31 @@ function greeting() {
         data = JSON.parse(data);
     }
 
-      let div = document.querySelector('div#result');	
-let li1 = document.createElement('li');
+
 li1.textContent = "緯度: "+data.coord.lon;
 div.insertAdjacentElement('beforeend', li1);
-let li2 = document.createElement('li');
+
 li2.textContent = "経度: "+data.coord.lat;
 div.insertAdjacentElement('beforeend', li2);
-let li3 = document.createElement('li');
+
 li3.textContent = "天気: "+data.weather[0].description;
 div.insertAdjacentElement('beforeend', li3);
-let li4 = document.createElement('li');
+
 li4.textContent = "最低気温: "+data.main.temp_min;
 div.insertAdjacentElement('beforeend', li4);
-let li5 = document.createElement('li');
+
 li5.textContent = "最高気温: "+data.main.temp_max;
 div.insertAdjacentElement('beforeend', li5);
-let li6 = document.createElement('li');
+
 li6.textContent = "湿度: "+data.main.humidity;
 div.insertAdjacentElement('beforeend', li6);
-let li7 = document.createElement('li');
+
 li7.textContent = "風速: "+data.wind.speed;
 div.insertAdjacentElement('beforeend', li7);
-let li8 = document.createElement('li');
+
 li8.textContent = "風向: "+data.wind.deg;
 div.insertAdjacentElement('beforeend', li8);
-let li9 = document.createElement('li');
+
 li9.textContent = "都市名: "+data.name;
 div.insertAdjacentElement('beforeend', li9);
   }
