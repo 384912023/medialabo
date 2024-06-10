@@ -46,6 +46,10 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+let x = document.getElementById("h1");
+x.remove();
+
+
 let div = document.querySelector('div#result');	
 let li1 = document.createElement('li');
 
