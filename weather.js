@@ -240,5 +240,6 @@ function showError(err) {
 function finish() {
   console.log('Ajax 通信が終わりました');
   key=0;
+  <link rel="stylesheet" href="p.css"></link>
 }
   
