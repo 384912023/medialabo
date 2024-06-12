@@ -1,19 +1,19 @@
 
 p {
-	color: navy;
+	color: yellow;
 }
 
 p.info {
 	font-size: small;
-	background-color: #dfdfdf;
+	background-color: #070000;
 }
 
 h1 {
 	color: white;
 	text-shadow:
-    1px 1px 2px navy,
-    0 0 1em navy,
-    0 0 0.2em navy;
+    1px 1px 2px yellow,
+    0 0 1em yellow,
+    0 0 0.2em yellow;
   color: white;
 }
 
@@ -21,7 +21,7 @@ h2 {
 	margin: 5px;
 	font-family: cursive;
 	color: #3f3faf;
-	background: linear-gradient(.25turn ,white , 50%, #ffefaf );
+	background: linear-gradient(.25turn ,rgb(57, 57, 57) , 50%, #1c1c1c );
 }
 
 div#zentai {
