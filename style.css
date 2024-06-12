@@ -5,7 +5,6 @@ p {
 
 p.info {
 	font-size: small;
-	background-color: #070000;
 }
 
 h1 {
@@ -50,6 +49,6 @@ html {
 	background-color: #070000;
 }
 
-a {
+a href {
 	color: white;
 }
