@@ -24,6 +24,13 @@ h2 {
 	background: linear-gradient(.25turn ,rgb(57, 57, 57) , 50%, #b6b4b4 );
 }
 
+b {
+	margin: 5px;
+	font-family: cursive;
+	color: white;
+	background: linear-gradient(.25turn ,rgb(57, 57, 57) , 50%, #b6b4b4 );
+}
+
 div#zentai {
 	display: grid;
 	width: 1024px;
@@ -41,4 +48,8 @@ img{
 }
 html {
 	background-color: #070000;
+}
+
+a {
+	color: white;
 }
