@@ -24,11 +24,9 @@ h2 {
 }
 
 b {
-	margin: 5px;
-	font-family: cursive;
 	color: white;
-	background: linear-gradient(.25turn ,rgb(57, 57, 57) , 50%, #b6b4b4 );
 }
+	
 
 div#zentai {
 	display: grid;
